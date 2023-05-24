@@ -5,10 +5,10 @@ using namespace std;
 void hanoi(int discos, char A, char B, char C){
   if(discos >= 2){
     hanoi(discos-1, A, C , B);
-    cout << A << " -> " << C << '\n';
+    cout << A << " -> " << C << endl;
     hanoi(discos-1, B, A, C);
   }else{
-    cout << A << " -> " << C << '\n';
+    cout << A << " -> " << C << endl;
   }
 }
 int main(){
