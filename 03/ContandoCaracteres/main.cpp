@@ -5,7 +5,7 @@
 using namespace std;
 
 // Retorna o números de ocorrências do caractere 'c' na string 'str' (com 'n' caracteres).
-// Algoritmo deve ser recursivo e sem comandos de repetição.
+// Algoritmo deve ser recursivo e sem comandos de repetição..
 int contaCaracteres(string str, int n, char c){
     // fazer
   int numC {};
