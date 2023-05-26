@@ -5,12 +5,11 @@
 #include "Matriz.h"
 using namespace std;
 
-int main()
-{
+int main(){
 	vector<Matriz*> matrizes; // Vector de ponteiros para matrizes
 	
 	while(true) {
-		string line;
+ 		string line;
 		string comando;
 		
 		getline(cin, line);
@@ -29,15 +28,15 @@ int main()
 			int l, c;
 			ss >> l;
 			ss >> c;
-            Matriz *m = new Matriz(l, c);
-            for(int i = 0; i < l; ++i) {
-                for(int j = 0; j < c; ++j) {
-                    int val = 0;
-                    cin >> val;
-                    cin.ignore();
-                    m->setValor(val, i, j);
-                }
-            }
+  		Matriz *m = new Matriz(l, c);
+		for(int i = 0; i < l; ++i) {
+                	for(int j = 0; j < c; ++j) {
+                    	int val = 0;
+                    	cin >> val;
+                    	cin.ignore();
+                    	m->setValor(val, i, j);
+                	}
+            	}
 			matrizes.push_back( m );
 		}
 		// printmatrix [k]
@@ -52,13 +51,13 @@ int main()
 			ss >> k;
 			cout << "linhas: " << (matrizes[k])->linhas() << endl;
 		}
-        // ncolunas [k]
+        	// ncolunas [k]
 		else if(comando == "ncolunas") {
 			int k;
 			ss >> k;
 			cout << "colunas: " << matrizes[k]->colunas() << endl;
 		}
-        // getvalor [i] [j] [k]
+        	// getvalor [i] [j] [k]
 		else if(comando == "getvalor") {
 			int i, j, k;
 			ss >> i >> j >> k;
@@ -66,31 +65,30 @@ int main()
 		}
 		// sum [p] [q] 
 		else if(comando == "sum") {
-            int p, q;
+    			int p, q;
 			ss >> p >> q;
 			Matriz *C = matrizes[p]->soma(*(matrizes[q]));
-			if(C == nullptr) 
-                cout << "nao foi possivel somar" << endl;
-            else {
-                C->print();
-                delete C;
-            }
+				if(C == nullptr) 
+                			cout << "nao foi possivel somar" << endl;
+            			else {
+               	 			C->print();
+                			delete C;
+            			}
 		}
-        // multiply [p] [q] 
+        	// multiply [p] [q] 
 		else if(comando == "multiply") {
-            int p, q;
+			int p, q;
 			ss >> p >> q;
 			Matriz *C = matrizes[p]->multiplica(*(matrizes[q]));
-			if(C == nullptr) 
-                cout << "nao foi possivel multiplicar" << endl;
-            else {
-                C->print();
-                delete C;
-            }
-		}
-		else {
+				if(C == nullptr) 
+                			cout << "nao foi possivel multiplicar" << endl;
+           		 	else {
+                			C->print();
+                			delete C;
+				}
+		} else {
 			cout << "comando inexistente" << endl;
 		}
 	}
-	return 0;
+return 0;
 }
