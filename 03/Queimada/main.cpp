@@ -3,7 +3,7 @@
 using namespace std;
 
 
-void show(string *mat, int nl) {
+void show(string *mat, int nl){
   for(int l = 0; l < nl; l++){
     cout << mat[l] << '\n';
   }

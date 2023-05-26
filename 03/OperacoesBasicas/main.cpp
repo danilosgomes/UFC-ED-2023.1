@@ -89,4 +89,5 @@ int main(){
     inv(novo, (int)novo.size()-1);
     vet(novo, (int)novo.size());
   cout << ']' << '\n';
+  
 }
