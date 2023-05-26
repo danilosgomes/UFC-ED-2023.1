@@ -18,7 +18,7 @@ Matriz::Matriz(int m, int n) {
 // Destrutor: Libera a memoria que foi alocada dinamicamente no construtor
 Matriz::~Matriz() {
 	for(int i {0}; i < this -> lin; i++){
-					delete[] mat[i];
+		delete[] mat[i];
 	}
 	delete[] mat;
 	cout << "matriz liberada" << endl;
@@ -47,10 +47,10 @@ void Matriz::setValor(int valor, int i, int j) {
 // Imprimir a matriz 
 void Matriz::print() {
     for(int i = 0; i < lin; ++i) {
-		for(int j = 0; j < col; ++j) {
-			cout << setw(7) << mat[i][j];
-		}
-		cout << "\n";
+	for(int j = 0; j < col; ++j) {
+		cout << setw(7) << mat[i][j];
+	}
+	cout << "\n";
 	}
 } 
 
@@ -75,7 +75,7 @@ Matriz *Matriz::multiplica(Matriz& B){
 				
 		for (int i {0}; i < aux -> lin; i++){
 			for (int j {0}; j < aux -> col; j++){
-					aux -> mat[i][j] = 0;
+				aux -> mat[i][j] = 0;
 				for(int k {0}; k < this -> lin; k++){
 					aux -> mat[i][j] += this -> mat[i][k] * B.mat[k][j];
 				}
