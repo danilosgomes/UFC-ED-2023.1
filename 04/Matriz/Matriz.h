@@ -4,7 +4,7 @@
 class Matriz {
 private:
     int lin;     // numero de linhas da matriz
-    int col;    // numero de colunas da matriz
+    int col;     // numero de colunas da matriz
     int **mat;   // ponteiro para matriz de inteiros (deve ser alocada dinamicamente)
     
 public:
