@@ -8,7 +8,7 @@ void converte_tempo(int segundos, int *hor, int *min, int *seg){
     *seg = segundos;
 }
 
-int main() {
+int main(){
     int tempo, h, m, s;
     std::cin >> tempo;
    

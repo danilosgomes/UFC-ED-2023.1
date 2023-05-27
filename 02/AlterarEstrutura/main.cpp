@@ -3,7 +3,7 @@
 
 using namespace std;
 
-struct aluno {
+struct aluno{
   float nota[3], media;
 };
 

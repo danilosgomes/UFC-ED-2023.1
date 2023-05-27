@@ -6,7 +6,7 @@ void troca(int *a, int *b){
     *b = aux;
 }
 
-int main() {
+int main(){
     int x, y;
     std::cin >> x;
     std::cin >> y;
