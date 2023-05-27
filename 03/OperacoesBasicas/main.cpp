@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void vet(vector<int>& novo, int size){
+void vet(vector<int>& novo, int size) {
   if(size == 1){
     cout << novo[0] << " ";
   }else{
