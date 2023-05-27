@@ -4,7 +4,7 @@
 
 using namespace std;
 
-struct aluno{
+struct aluno {
   int matricula;
   char nome[50];
   float media;
